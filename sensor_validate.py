@@ -1,5 +1,5 @@
-def Is_not_empty_list(values):
-  return (isinstance(values, list) and (len(values)!=0))
+'''def Is_not_empty_list(values):
+  return (isinstance(values, list) and (len(values)!=0))'''
 
 def  Consecutive_Values_Difference_is_less_Than_maxDelta(value, nextValue, maxDelta):
   return(nextValue - value < maxDelta)
