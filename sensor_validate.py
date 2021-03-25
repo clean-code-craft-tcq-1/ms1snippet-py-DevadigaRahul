@@ -2,9 +2,7 @@ def Is_not_empty_list(values):
   return (isinstance(values, list) and (len(values)!=0))
 
 def  Consecutive_Values_Difference_is_less_Than_maxDelta(value, nextValue, maxDelta):
-  if nextValue - value > maxDelta:
-    return False
-  return True
+  return(nextValue - value < maxDelta)
 
 def reports_sudden_jump_in_reading(values,maxDelta):
   #if(Is_not_empty_list(values)):
