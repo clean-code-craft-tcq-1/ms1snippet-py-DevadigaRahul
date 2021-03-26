@@ -1,19 +1,18 @@
+def Is_not_empty_list(values):
+  return (isinstance(values, list) and (len(values)!=0))
 
-def  _give_me_a_good_name(value, nextValue, maxDelta):
-  if nextValue - value > maxDelta:
-    return False
-  return True
+def  Consecutive_Values_Difference_is_less_Than_maxDelta(value, nextValue, maxDelta):
+  return(nextValue - value < maxDelta)
 
-def validate_soc_reading(values):
-  last_but_one_reading = len(values) - 1
-  for i in range(last_but_one_reading):
-    if(not _give_me_a_good_name(values[i], values[i + 1], 0.05)):
-      return False
-  return True
+def check_for_sudden_jump_in_reading(values,maxDelta):
+    last_but_one_reading = len(values) - 1
+    for i in range(last_but_one_reading):
+      if(not Consecutive_Values_Difference_is_less_Than_maxDelta(values[i], values[i + 1], maxDelta)):
+        return False
+    return True
+  
+def reports_sudden_jump_in_reading(values,maxDelta):
+  if(Is_not_empty_list(values)):#validating test input is non empty list
+    return check_for_sudden_jump_in_reading(values,maxDelta)
+  
 
-def validate_current_reading(values):
-  last_but_one_reading = len(values) - 1
-  for i in range(last_but_one_reading):
-    if(not _give_me_a_good_name(values[i], values[i + 1], 0.1)):
-      return False
-  return True
