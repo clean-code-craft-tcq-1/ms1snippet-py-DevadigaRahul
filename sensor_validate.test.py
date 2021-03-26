@@ -21,12 +21,12 @@ class SensorValidatorTest(unittest.TestCase):
 
     )
 
-  def test_reports_error_when_temperature_jumps(self):#Test Empty list/Reading
+  def test_reports_error_when_NonEmpty_readings(self):#Test Empty list/Reading
     self.assertEqual(
        sensor_validate.reports_sudden_jump_in_reading([],maxDelta['temperature']),None
     )
     
-  def test_reports_error_when_charge_rate_jumps(self):#Test None reading
+  def test_reports_error_when_other_than_None(self):#Test None 
     self.assertEqual(
        sensor_validate.reports_sudden_jump_in_reading(None,maxDelta['charge_rate']),None
     )

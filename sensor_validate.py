@@ -12,7 +12,7 @@ def check_for_sudden_jump_in_reading(values,maxDelta):
     return True
   
 def reports_sudden_jump_in_reading(values,maxDelta):
-  if(Is_not_empty_list(values)):
+  if(Is_not_empty_list(values)):#validating test input is non empty list
     return check_for_sudden_jump_in_reading(values,maxDelta)
   
 
